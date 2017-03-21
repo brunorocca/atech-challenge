@@ -27,11 +27,11 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 "description":"O Desenvolvedor Bruno Rocca solicitou a compra de dois Jatinhos para sua frota particular. O maior motivo é para fugir do trânsito de São Paulo em suas visitas a ATECH.",
 "products": [
 		{	
-			"productName": "PHENOM 300",
+			"productName": "PHENOM_300",
 			"quantity": 1
 		},
    		{	
-			"productName": "Legacy 650E",
+			"productName": "Legacy_650E",
 			"quantity": 1
 		}
 
@@ -40,12 +40,12 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 ```
 
 ### Consulta de Notas Fiscais por CNPJ do Emissor
-- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8](http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8)
+- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-89](http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-89)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
 ### Consulta de Notas Fiscais por Nome do Produto
-- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM 300](http://localhost:8080/atech/invoices?productName=PHENOM 300)
+- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM_300](http://localhost:8080/atech/invoices?productName=PHENOM_300)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
