@@ -40,12 +40,12 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 ```
 
 ### Consulta de Notas Fiscais por CNPJ do Emissor
-- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8](http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8)
+- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8](http://localhost:8080/api/invoices/cnpj?cnpj=07.689.002/0001-8)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
 ### Consulta de Notas Fiscais por Nome do Produto
-- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM 300](http://localhost:8080/atech/invoices?productName=PHENOM 300)
+- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM 300](http://localhost:8080/api/invoices?productName=PHENOM 300)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
