@@ -4,7 +4,7 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 
 ## Configuração
 
-	$ git clone https://github.com/brunorocca/atech-challenge
+	$ git clone https://github.com/brunorocca/atech-invoice
 	
     $ mvn spring-boot:run
 
@@ -18,7 +18,7 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 
 **JSON de Exemplo:**
 
-- **POST** [http://localhost:8080/atech/invoices/create](http://localhost:8080/atech/invoices/create)
+- **POST** [http://localhost:8080/atech/invoices/create](http://localhost:8080/api/invoices/create)
 - **Accept:** application/json
 - **Content-Type:** application/json
 ```
@@ -27,11 +27,11 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 "description":"O Desenvolvedor Bruno Rocca solicitou a compra de dois Jatinhos para sua frota particular. O maior motivo é para fugir do trânsito de São Paulo em suas visitas a ATECH.",
 "products": [
 		{	
-			"productName": "PHENOM_300",
+			"productName": "PHENOM 300",
 			"quantity": 1
 		},
    		{	
-			"productName": "Legacy_650E",
+			"productName": "Legacy 650E",
 			"quantity": 1
 		}
 
@@ -40,12 +40,28 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 ```
 
 ### Consulta de Notas Fiscais por CNPJ do Emissor
-- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-89](http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-89)
+- **POST** [http://localhost:8080/atech/invoices/cnpj?cnpj=07.689.002/0001-8](http://localhost:8080/api/invoices/cnpj?cnpj=07.689.002/0001-8)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
 ### Consulta de Notas Fiscais por Nome do Produto
-- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM_300](http://localhost:8080/atech/invoices?productName=PHENOM_300)
+- **POST** [http://localhost:8080/atech/invoices?productName=PHENOM 300](http://localhost:8080/api/invoices?productName=PHENOM 300)
 - **Accept:** application/json
 - **Content-Type:** application/json
 
+## Configuração
+
+Os testes foram criados em dois pacotes. Um de teste Unitário e outro teste de Integração.
+Os testes unitários tem como função executar testes de métodos do sistema, bem como seus retornos.
+Os teste de Integração tem como função re-testar as principais funcionalidades do sistema como um todo. Para tal, os testes necessitam da aplicação rodando para que seja possível efetuar os POSTs e validar os JSONs de entrada e saída.
+
+Para os testes de Integração o ideal seria utilizar ferramentas como Selenium juntamente com o Jenkins. Mas como se trata de um teste, e para 
+facilitar as análise, eu criei os testes de integração para serem rodados manualmente após o start da aplicação na máquina.
+
+### Teste unitário
+
+	$ mvn test -DtestGroup=br.com.atech.test.unit
+	
+### Teste de Integração (após o start do servidor)
+	
+	$ mvn test -DtestGroup=br.com.atech.test.integration

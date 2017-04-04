@@ -49,7 +49,7 @@ Desafio enviado pelo Augusto Cesar Lima de Aragao Junior <aaragao@atech.com.br> 
 - **Accept:** application/json
 - **Content-Type:** application/json
 
-## Configuração
+## Testes Automatizados
 
 Os testes foram criados em dois pacotes. Um de teste Unitário e outro teste de Integração.
 Os testes unitários tem como função executar testes de métodos do sistema, bem como seus retornos.
